@@ -12,7 +12,7 @@ URL:		http://vegemite.chem.nottingham.ac.uk/~xmakemol/
 License:	GPL
 Group:		Sciences/Chemistry
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	X11-devel xpm-devel MesaGLU-devel lesstif-devel
+BuildRequires:	X11-devel xpm-devel MesaGLU-devel lesstif-devel mesaglw-devel
 
 %description
 XMakemol can be used to view and manipulate atomic and molecular data given in
