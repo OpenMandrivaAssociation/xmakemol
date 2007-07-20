@@ -1,6 +1,6 @@
 %define name	xmakemol
 %define version 5.15
-%define release 1mdk
+%define release %mkrel 2
 
 Name: 	 	%{name}
 Summary: 	Simple XYZ molecule editor and GL viewer
@@ -36,13 +36,20 @@ perl -p -i -e 's/-O2/$RPM_OPT_FLAGS/g' Makefile
 %install
 rm -rf $RPM_BUILD_ROOT
 %makeinstall
-bzip2 xmake_anim.pl.1
-cp xmake_anim.pl.1.bz2 %buildroot/%_mandir/man1
+cp xmake_anim.pl.1 %buildroot/%_mandir/man1
 
-#menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat <<EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): command="%{name}" icon="chemistry_section.png" needs="x11" title="XMakeMol" longtitle="Molecule editor and viewer" section="More Applications/Sciences/Chemistry"
+mkdir -p %{buildroot}%{_datadir}/applications
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop <<EOF
+[Desktop Entry]
+Encoding=UTF-8
+Name=XMakeMol
+Comment=Simple XYZ molecule editor and GL viewer
+Exec=%{_bindir}/%{name} 
+Icon=chemistry_section.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=Motif;Education;Science;Chemistry;
 EOF
 
 %clean
@@ -61,4 +68,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/xmake_anim.pl
 %{_datadir}/%name
 %{_mandir}/man1/*
-%{_menudir}/%name
+%{_datadir}/applications/mandriva-%{name}.desktop
