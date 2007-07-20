@@ -30,7 +30,9 @@ gmake_anim.pl).
 perl -p -i -e 's/-O2/$RPM_OPT_FLAGS/g' Makefile
 
 %build
-%configure
+# Disable OpenGL for now, as linking against libmesaglw is broken
+# AdamW 2007/07
+%configure --without-opengl
 %make
 										
 %install
@@ -43,7 +45,7 @@ cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop <<EOF
 [Desktop Entry]
 Encoding=UTF-8
 Name=XMakeMol
-Comment=Simple XYZ molecule editor and GL viewer
+Comment=Simple molecule editor and viewer
 Exec=%{_bindir}/%{name} 
 Icon=chemistry_section.png
 Terminal=false
