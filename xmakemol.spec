@@ -43,7 +43,6 @@ cp xmake_anim.pl.1 %buildroot/%_mandir/man1
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop <<EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=XMakeMol
 Comment=Simple molecule editor and viewer
 Exec=%{_bindir}/%{name} 
