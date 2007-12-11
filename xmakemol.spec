@@ -46,7 +46,7 @@ cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop <<EOF
 Name=XMakeMol
 Comment=Simple molecule editor and viewer
 Exec=%{_bindir}/%{name} 
-Icon=chemistry_section.png
+Icon=chemistry_section
 Terminal=false
 Type=Application
 StartupNotify=true
