@@ -11,6 +11,7 @@ Source:		http://savannah.nongnu.org/download/xmakemol/%{name}-%{version}.tar.bz2
 URL:		http://vegemite.chem.nottingham.ac.uk/~xmakemol/
 License:	GPL
 Group:		Sciences/Chemistry
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	X11-devel xpm-devel MesaGLU-devel lesstif-devel mesaglw-devel
 
 %description
