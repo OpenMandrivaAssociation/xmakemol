@@ -1,6 +1,6 @@
 %define name	xmakemol
-%define version 5.15
-%define release %mkrel 2
+%define version 5.16
+%define release %mkrel 1
 
 Name: 	 	%{name}
 Summary: 	Simple XYZ molecule editor and GL viewer
