@@ -7,7 +7,7 @@ Summary: 	Simple XYZ molecule editor and GL viewer
 Version: 	%{version}
 Release: 	%{release}
 
-Source:		http://savannah.nongnu.org/download/xmakemol/%{name}-%{version}.tar.bz2
+Source:		http://savannah.nongnu.org/download/xmakemol/%{name}-%{version}.tar.gz
 URL:		http://vegemite.chem.nottingham.ac.uk/~xmakemol/
 License:	GPL
 Group:		Sciences/Chemistry
