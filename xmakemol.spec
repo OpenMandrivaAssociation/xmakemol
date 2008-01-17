@@ -64,7 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc README AUTHORS ChangeLog COPYING NEWS PROBLEMS ToDo.txt 
+%doc README AUTHORS COPYING NEWS PROBLEMS ToDo.txt 
 %{_bindir}/%name
 %{_bindir}/xmake_anim.pl
 %{_datadir}/%name
