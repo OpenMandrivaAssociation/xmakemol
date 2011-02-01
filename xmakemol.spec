@@ -1,6 +1,6 @@
 %define name	xmakemol
 %define version 5.16
-%define release %mkrel 5
+%define release %mkrel 6
 
 Name: 	 	%{name}
 Summary: 	Simple XYZ molecule editor and GL viewer
@@ -12,7 +12,9 @@ URL:		http://vegemite.chem.nottingham.ac.uk/~xmakemol/
 License:	GPL
 Group:		Sciences/Chemistry
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	X11-devel xpm-devel MesaGLU-devel lesstif-devel mesaglw-devel
+BuildRequires:	libx11-devel
+BuildRequires:	lesstif-devel
+BuildRequires:	libxt-devel
 
 %description
 XMakemol can be used to view and manipulate atomic and molecular data given in
@@ -27,17 +29,16 @@ gmake_anim.pl).
 
 %prep
 %setup -q
-perl -p -i -e 's/-O2/$RPM_OPT_FLAGS/g' Makefile
 
 %build
 # Disable OpenGL for now, as linking against libmesaglw is broken
 # AdamW 2007/07
-%configure --without-opengl
+%configure2_5x --without-opengl
 %make
 										
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 cp xmake_anim.pl.1 %buildroot/%_mandir/man1
 
 mkdir -p %{buildroot}%{_datadir}/applications
