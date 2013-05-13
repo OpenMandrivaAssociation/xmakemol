@@ -1,6 +1,6 @@
 %define name	xmakemol
 %define version 5.16
-%define release %mkrel 6
+%define release  7
 
 Name: 	 	%{name}
 Summary: 	Simple XYZ molecule editor and GL viewer
@@ -11,7 +11,6 @@ Source:		http://savannah.nongnu.org/download/xmakemol/%{name}-%{version}.tar.gz
 URL:		http://vegemite.chem.nottingham.ac.uk/~xmakemol/
 License:	GPL
 Group:		Sciences/Chemistry
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	lesstif-devel
 BuildRequires:	pkgconfig(xt)
