@@ -1,0 +1,14 @@
+diff -up xmakemol-5.16/bbox.c.omv~ xmakemol-5.16/bbox.c
+diff -up xmakemol-5.16/globals.h.omv~ xmakemol-5.16/globals.h
+--- xmakemol-5.16/globals.h.omv~	2022-09-27 18:44:23.570997729 +0200
++++ xmakemol-5.16/globals.h	2022-09-27 18:44:42.178087351 +0200
+@@ -220,7 +220,8 @@ struct elements *element;
+ 
+ int *sorted_atoms;
+ 
+-bounding_box bbox, file_bbox, bbox_by_hand;
++extern bounding_box bbox;
++bounding_box file_bbox, bbox_by_hand;
+ Boolean bbox_available;
+ 
+ Boolean changing_frame;
