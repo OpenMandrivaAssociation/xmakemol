@@ -5,7 +5,7 @@ Release: 	9
 
 Source:		http://savannah.nongnu.org/download/xmakemol/%{name}-%{version}.tar.gz
 Patch0:		xmakemol-compile.patch
-URL:		http://vegemite.chem.nottingham.ac.uk/~xmakemol/
+URL:		https://vegemite.chem.nottingham.ac.uk/~xmakemol/
 License:	GPL
 Group:		Sciences/Chemistry
 BuildRequires:	pkgconfig(x11)
