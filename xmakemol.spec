@@ -8,6 +8,11 @@ Patch0:		xmakemol-compile.patch
 URL:		https://vegemite.chem.nottingham.ac.uk/~xmakemol/
 License:	GPL
 Group:		Sciences/Chemistry
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	motif-devel
 BuildRequires:	pkgconfig(xt)
