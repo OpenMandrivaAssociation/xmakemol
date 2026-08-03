@@ -1,11 +1,12 @@
 Name: 	 	xmakemol
 Summary: 	Simple XYZ molecule editor and GL viewer
-Version: 	5.16
-Release: 	9
+Version: 	5.16h
+Release: 	1
 
-Source:		http://savannah.nongnu.org/download/xmakemol/%{name}-%{version}.tar.gz
+# 5.16h is the maintained NetBSD/pkgsrc source tree (extracts as xmakemol-5.16)
+Source:		https://ftp.NetBSD.org/pub/NetBSD/misc/vins/dists/%{name}-%{version}.tar.xz
 Patch0:		xmakemol-compile.patch
-URL:		https://vegemite.chem.nottingham.ac.uk/~xmakemol/
+URL:		https://www.nongnu.org/xmakemol/
 License:	GPL
 Group:		Sciences/Chemistry
 BuildRequires:	autoconf
@@ -29,7 +30,7 @@ animated gif file using the bundled utility xmake_anim.pl (formerly
 gmake_anim.pl).
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n xmakemol-5.16
 
 %build
 # OpenGL wants <GL/GLwMDrawA.h> -- where does that come from?

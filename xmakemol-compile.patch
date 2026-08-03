@@ -1,8 +1,19 @@
-diff -up xmakemol-5.16/bbox.c.omv~ xmakemol-5.16/bbox.c
-diff -up xmakemol-5.16/globals.h.omv~ xmakemol-5.16/globals.h
---- xmakemol-5.16/globals.h.omv~	2022-09-27 18:44:23.570997729 +0200
-+++ xmakemol-5.16/globals.h	2022-09-27 18:44:42.178087351 +0200
-@@ -220,7 +220,8 @@ struct elements *element;
+diff -uprN xmakemol-5.16.orig/bbox.h xmakemol-5.16/bbox.h
+--- xmakemol-5.16.orig/bbox.h	2022-12-17 22:41:01.000000000 +0100
++++ xmakemol-5.16/bbox.h	2026-08-03 06:34:50.052203291 +0200
+@@ -26,7 +26,7 @@ enum bbox_type {AUTOMATIC, FROM_FILE};
+ 
+ #ifdef __BBOX_C__
+ 
+-extern bounding_box bbox;
++bounding_box bbox;
+ enum bbox_type bbox_type = AUTOMATIC;
+ Widget bbox_dialog = NULL;  /* wjq */
+ Widget bbMin[4], bbMax[4];  /* 0:     The whole entry line for Min, Max values,
+diff -uprN xmakemol-5.16.orig/globals.h xmakemol-5.16/globals.h
+--- xmakemol-5.16.orig/globals.h	2022-12-17 22:41:01.000000000 +0100
++++ xmakemol-5.16/globals.h	2026-08-03 06:34:50.052322662 +0200
+@@ -222,7 +222,8 @@ struct elements *element;
  
  int *sorted_atoms;
  
